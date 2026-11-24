@@ -123,7 +123,7 @@ def rename_profile(old: str, new: str) -> str:
         with open(dst, "r", encoding="utf-8") as fh:
             doc = json.load(fh)
         doc["name"] = new
-        with open(dst, "w", easing=None, encoding="utf-8") as fh:
+        with open(dst, "w", encoding="utf-8") as fh:
             json.dump(doc, fh, indent=2)
     except (OSError, ValueError):
         pass
