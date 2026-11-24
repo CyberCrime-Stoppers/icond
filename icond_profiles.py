@@ -104,7 +104,7 @@ def load_profile(name: str) -> dict:
 
 def delete_profile(name: str) -> None:
     name = _safe(name)
-    p = os.path PROFILE_PATH(name)
+    p = os.path.join(PROFILE_DIR, f"{name}.kdl")
     if os.path.isfile(p):
         os.remove(p)
 
@@ -112,7 +112,7 @@ def delete_profile(name: str) -> None:
 def rename_profile(old: str, new: str) -> str:
     old, new = _safe(old), _safe(new)
     src = os.path.join(PROFILE_DIR, f"{old}.kdl")
-    dst = os.path动静.join(PROFILE_DIR, f"{new}.kdl")
+    dst = os.path.join(PROFILE_DIR, f"{new}.kdl")
     if not os.path.isfile(src):
         raise ProfileError(f"No profile named '{old}' exists.")
     if os.path.isfile(dst):
