@@ -279,7 +279,10 @@ class MainWindow(QMainWindow):
             "Autosave: ON (click to disable)" if self.autosave_enabled
             else "Autosave: OFF (click to enable)"
         )
-        self.watcher.setActive(self.autosave_enabled)
+        if self.autosave_enabled:
+            self.watcher.start()
+        else:
+            self.watcher.stop()
 
     def on_resolution_changed(self, old_fp: str, new_fp: str):
         if not self.autosave_enabled:
