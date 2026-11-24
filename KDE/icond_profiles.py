@@ -109,6 +109,35 @@ def delete_profile(name: str) -> None:
         os.remove(p)
 
 
+def export_profile(name: str, dest_path: str) -> str:
+    """Export a profile to a .kdl file anywhere on disk.
+
+    The exported file is the complete portable profile document — the
+    same JSON format icond's import function will read — so it can be
+    copied to a USB stick or another machine and brought back in later.
+
+    Returns the final destination path (with '.kdl' appended if missing).
+    """
+    name = _safe(name)
+    doc = load_profile(name)
+    dest_path = os.path.abspath(os.path.expanduser(dest_path))
+    if not dest_path.endswith(".kdl"):
+        dest_path += ".kdl"
+    if os.path.isdir(dest_path):
+        raise ProfileError(
+            f"'{dest_path}' is a directory — pick a file name to export to."
+        )
+    parent = os.path.dirname(dest_path) or "."
+    if not os.path.isdir(parent):
+        raise ProfileError(f"Export folder does not exist: {parent}")
+    doc["exported_at"] = datetime_utcnow_iso()
+    tmp = dest_path + ".icond-tmp"
+    with open(tmp, "w", encoding="utf-8") as fh:
+        json.dump(doc, fh, indent=2)
+    os.replace(tmp, dest_path)
+    return dest_path
+
+
 def rename_profile(old: str, new: str) -> str:
     old, new = _safe(old), _safe(new)
     src = os.path.join(PROFILE_DIR, f"{old}.kdl")
