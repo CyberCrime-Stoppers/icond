@@ -23,7 +23,7 @@ from PySide6.QtWidgets import (
     QHBoxLayout, QHeaderView, QLabel, QLineEdit, QListWidget,
     QListWidgetItem, QMainWindow, QMessageBox, QProgressBar, QPushButton,
     QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget, QAbstractItemView,
-    QInputDialog,
+    QInputDialog, QFileDialog,
 )
 
 import icond_backend as backend
@@ -130,10 +130,11 @@ class MainWindow(QMainWindow):
         btns = QVBoxLayout()
         b_save = QPushButton("💾 Save current layout…")
         b_restore = QPushButton("♻ Restore selected")
+        b_export = QPushButton("📤 Export selected…")
         b_rename = QPushButton("✏ Rename selected")
         b_delete = QPushButton("🗑 Delete selected")
         b_refresh = QPushButton("🔄 Refresh list")
-        for w in (b_save, b_restore, b_rename, b_delete, b_refresh):
+        for w in (b_save, b_restore, b_export, b_rename, b_delete, b_refresh):
             btns.addWidget(w)
         btns.addStretch(1)
         self.chk_autosave = QPushButton("Autosave: ON (click to disable)")
@@ -146,6 +147,7 @@ class MainWindow(QMainWindow):
 
         b_save.clicked.connect(self.save_dialog)
         b_restore.clicked.connect(self._restore_selected)
+        b_export.clicked.connect(self.export_selected)
         b_rename.clicked.connect(self.rename_selected)
         b_delete.clicked.connect(self.delete_selected)
         b_refresh.clicked.connect(self.refresh)
@@ -244,6 +246,28 @@ class MainWindow(QMainWindow):
             msg += f"\nSafety backup of the previous layout: {bak}"
         QMessageBox.information(self, "Restore done", msg)
         self.refresh()
+
+    def export_selected(self):
+        name = self._selected_name()
+        if not name:
+            self.status.setText("Select a profile first.")
+            return
+        suggested = f"{name}.kdl"
+        home = os.path.expanduser("~")
+        dest, _ = QFileDialog.getSaveFileName(
+            self,
+            "Export profile",
+            os.path.join(home, suggested),
+            "icond profile (*.kdl)",
+        )
+        if not dest:
+            return
+        try:
+            out = profiles.export_profile(name, dest)
+        except profiles.ProfileError as exc:
+            QMessageBox.critical(self, "Export failed", str(exc))
+            return
+        self.status.setText(f"Exported '{name}' → {out}")
 
     def rename_selected(self):
         name = self._selected_name()
