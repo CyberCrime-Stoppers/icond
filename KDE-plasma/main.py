@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """icond — Icon Layout Manager for KDE Plasma (Linux DesktopOK equivalent).
 
 Saves and restores the desktop icon layout by snapshotting Plasma's

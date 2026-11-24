@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Name=icond
+GenericName=Desktop Icon Layout Manager
+Comment=Save and restore your KDE Plasma desktop icon layouts (DesktopOK-style)
+Exec=python3 /path/to/icond/main.py
+Icon=preferences-desktop
+Terminal=false
+Categories=System;Utility;DesktopSettings;
+Keywords=desktop;icons;layout;restore;plasma;kde;
+StartupWMClass=icond
+X-KDE-StartupNotify=true
