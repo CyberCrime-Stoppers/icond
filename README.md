@@ -23,6 +23,9 @@ just like DesktopOK applying a saved icon layout on Windows).
 - **Save layout** — snapshot the current icon arrangement under any profile name
 - **Restore layout** — put icons back exactly as they were; automatic safety
   backup of the layout you're replacing (10 rolling backups, never lose anything)
+- **Export profile** — copy any saved profile to a portable `.kdl` file anywhere
+  on disk (USB stick, another machine) via a native save dialog; the exported
+  file carries the full layout data so it can be imported back in later
 - **Resolution autosave** — when a monitor is plugged/unplugged or the screen
   resolution changes, icond silently saves an `auto-<timestamp>` profile first,
   so your layout is never scrambled and lost
