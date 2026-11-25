@@ -8,7 +8,7 @@ restore it anytime — the Linux equivalent of the Windows program DesktopOK
  <br>
 <table>
 <tr>
-<img src="/screenshot/1.0.0/icond-window.png" width="350" height="350">
+<img src="/screenshot/1.0.0/icond-window.png" width="400" height="400">
  <br>
 <sub>
  <br>
@@ -16,7 +16,7 @@ restore it anytime — the Linux equivalent of the Windows program DesktopOK
  <h4>Full screen capability</h4> 
  <br>
 </td>
-<img src="/screenshot/1.0.0/Icond-full-window.png" width="260" height="260">
+<img src="/screenshot/1.0.0/Icond-full-window.png" width="400" height="400">
  <br> 
 <sub>
  <br>
@@ -25,7 +25,7 @@ restore it anytime — the Linux equivalent of the Windows program DesktopOK
  <h4> The PDUA Windowing Popup</h4>
  <br>
  <br>
- <img src="/screenshot/1.0.0/icond-sidemenu.png" width="150" height="300">
+ <img src="/screenshot/1.0.0/icond-sidemenu.png" width="400" height="400">
 <br><br>
 
 ## What it does
