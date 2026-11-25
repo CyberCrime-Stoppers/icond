@@ -4,6 +4,13 @@ Save your desktop icon layout the way it's arranged on your desktop, and
 restore it anytime — the Linux equivalent of the Windows program DesktopOK
 (`desktopok.exe`), with its own GUI built for KDE Plasma.
 
+
+
+<img src="/screenshot/1.0.0/Icond-window" width="100" height="100">
+<img src="/screenshot/1.0.0/Icond-sidemenu" width="50" height="100">
+<img src="/screenshot/1.0.0/Icond-full-window" width="100" height="100">
+
+
 ## What it does
 
 KDE Plasma stores the entire desktop layout — icon grid positions,
