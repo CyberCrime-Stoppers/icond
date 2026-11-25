@@ -8,7 +8,7 @@ restore it anytime — the Linux equivalent of the Windows program DesktopOK
  <br>
 <table>
 <tr>
-<img src="/screenshot/1.0.0/icond-window.png" width="250" height="250">
+<img src="/screenshot/1.0.0/icond-window.png" width="350" height="350">
  <br>
 <sub>
  <br>
@@ -16,7 +16,7 @@ restore it anytime — the Linux equivalent of the Windows program DesktopOK
  <h4>Full screen capability</h4> 
  <br>
 </td>
-<img src="/screenshot/1.0.0/Icond-full-window.png" width="150" height="150">
+<img src="/screenshot/1.0.0/Icond-full-window.png" width="260" height="260">
  <br> 
 <sub>
  <br>
