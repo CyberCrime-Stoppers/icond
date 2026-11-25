@@ -5,11 +5,28 @@ restore it anytime — the Linux equivalent of the Windows program DesktopOK
 (`desktopok.exe`), with its own GUI built for KDE Plasma.
 
 
-
-<img src="/screenshot/1.0.0/Icond-window" width="100" height="100">
-<img src="/screenshot/1.0.0/Icond-sidemenu" width="50" height="100">
-<img src="/screenshot/1.0.0/Icond-full-window" width="100" height="100">
-
+ <br>
+<table>
+<tr>
+<img src="/screenshot/1.0.0/Icond-window.png" width="100" height="100">
+ <br>
+<sub>
+ <br>
+</sub>
+ <h4>Full screen capability</h4> 
+ <br>
+</td>
+<img src="/screenshot/1.0.0/Icond-full-window.png" width="100" height="100">
+ <br> 
+<sub>
+ <br>
+ <i>✅ You can export your snapshots to a safe location, if your on a fresh installation.</i>
+</sub>
+ <h4> The PDUA Windowing Popup</h4>
+ <br>
+ <br>
+ <img src="/screenshot/1.0.0/Icond-sidemenu.png" width="50" height="100">
+<br><br>
 
 ## What it does
 
