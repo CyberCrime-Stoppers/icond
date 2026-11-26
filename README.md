@@ -22,7 +22,6 @@ restore it anytime — the Linux equivalent of the Windows program DesktopOK
  <br>
  <i>✅ You can export your snapshots to a safe location, if your on a fresh installation.</i>
 </sub>
- <h4> The PDUA Windowing Popup</h4>
  <br>
  <br>
  <img src="/screenshot/1.0.0/icond-sidemenu.png" width="250" height="400">
